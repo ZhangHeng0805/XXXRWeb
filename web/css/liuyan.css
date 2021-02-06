@@ -1,0 +1,31 @@
+body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #a9eeff;
+}
+h1{
+    font-family: 楷体;
+    font-size: 110px;
+    letter-spacing: 50px;
+    margin-left: 40px;
+}
+form p{
+    font-size: 50px;
+}
+form input{
+    font-size: 50px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 15px
+}
+.d1{
+    color: red;
+    font-size: 35px;
+}
+.d2{
+    text-align: center;
+}
+.d2_2{
+    font-size: 50px;
+}
