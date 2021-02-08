@@ -2,17 +2,18 @@ var time;
 var flag=true;
 var list=new Array();
 function run() {
-
     if (list.length>0) {
         if (flag) {
             start();
             flag = !flag;
         } else {
            stop();
-            flag = !flag;
+           var s=document.getElementById("l1").text();
+           alert("奖品:"+s);
+           flag = !flag;
         }
     }else {
-        alert("请先添加奖品")
+        alert("请先添加奖品");
     }
 }
 function start() {

@@ -79,7 +79,7 @@
     <tr>
         <td><%=HTMLUtil.delHTMLTag(f.getTime())%></td>
         <td><%=HTMLUtil.delHTMLTag(f.getName())%></td>
-        <td><%=HTMLUtil.delHTMLTag(f.getContact())%></td>v
+        <td><%=HTMLUtil.delHTMLTag(f.getContact())%></td>
         <td style="">
 <%--            <textarea readonly="readonly" style="border: none;text-indent: 0em;font-size:25px;padding:10px;width:100%;height:100%;background: #d1ffa0;resize:none;">--%>
                 <%=HTMLUtil.delHTMLTag(f.getContent())%>

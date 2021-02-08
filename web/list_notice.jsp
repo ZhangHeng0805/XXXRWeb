@@ -159,10 +159,10 @@ if ("true".equals(n)){%>
             <td><%=HTMLUtil.delHTMLTag(t.getPhonenum())%></td>
             <td><%=HTMLUtil.delHTMLTag(t.getName())%></td>
             <td><%=HTMLUtil.delHTMLTag(t.getTitle())%></td>
-            <td style="color: #ff332e"><% if ("1".equals(t.getState())){
-                %>公开<%
+            <td style="color: #2bbbff"><% if ("1".equals(t.getState())){
+            %>公开<%
             }else if ("2".equals(t.getState())){
-            %>私密<%
+            %><label style="color:red" >私密</label><%
             }%> </td>
             <td>
                 <form action="updateNotice.jsp"method="post">
@@ -191,7 +191,7 @@ if ("true".equals(n)){%>
             <td><%=HTMLUtil.delHTMLTag(t.getPhonenum())%></td>
             <td><%=HTMLUtil.delHTMLTag(t.getName())%></td>
             <td><%=HTMLUtil.delHTMLTag(t.getTitle())%></td>
-            <td style="color: #ff332e"><% if ("1".equals(t.getState())){
+            <td style="color: #2bbbff"><% if ("1".equals(t.getState())){
             %>公开<%
             }else if ("2".equals(t.getState())){
             %>私密<%

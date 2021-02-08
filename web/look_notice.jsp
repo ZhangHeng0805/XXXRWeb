@@ -24,7 +24,7 @@
     time=HTMLUtil.delHTMLTag(list.get(0).getTime());
     String name=HTMLUtil.delHTMLTag(list.get(0).getName());
     String title=HTMLUtil.delHTMLTag(list.get(0).getTitle());
-    String content=HTMLUtil.delHTMLTag(list.get(0).getContent());
+    String content=list.get(0).getContent();
     String tit="";
     if (title.length()>9){
         tit=title.substring(0,8)+"...";

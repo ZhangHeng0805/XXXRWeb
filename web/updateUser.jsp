@@ -36,16 +36,17 @@
             var time=document.forms["myForm"]["time"].value;
             var phone=document.forms["myForm"]["phone"].value;
             var name=document.forms["myForm"]["name"].value;
+            var pwd0=document.forms["myForm"]["pwd0"].value;
             var pwd1=document.forms["myForm"]["pwd1"].value;
             var pwd2=document.forms["myForm"]["pwd2"].value;
 
-            if (time.length>0&&name.length>0&&phone.length>0&&pwd1.length>0&&pwd2.length>0){
+            if (time.length>0&&name.length>0&&phone.length>0&&pwd1.length>0&&pwd2.length>0&&pwd0.length>0){
                 if (time.length < 21) {
                     if (phone.length == 11) {
                         if (name.length < 21) {
                             if (pwd1==pwd2) {
-                                if (pwd1.length < 19) {
-                                    if (pwd2.length>5) {
+                                if (pwd1.length < 19&&pwd0.length < 19) {
+                                    if (pwd2.length>5 && pwd0.length>5) {
                                         alert('时间：'+time + '\n账号：' + phone + '\n姓名：' + name + '\n新密码：' + pwd1+'\n状态：信息提交中...');
                                         return true;
                                     }else{
@@ -149,8 +150,12 @@
 %>
 <p class="n">修改信息失败，请重试，或留言联系</p>
 <a href="liuyan.jsp"><button style="font-size: 50px;letter-spacing: 25px;padding: 15px">去留言反馈</button></a>
-<%}else {
-
+<%}else if ("err1".equals(n)){
+%>
+<p class="n">旧密码错误，请重试，或留言联系</p>
+<a href="liuyan.jsp"><button style="font-size: 50px;letter-spacing: 25px;padding: 15px">去留言反馈</button></a>
+<%
+}else {
 String phone=request.getParameter("phone");
 String pwd=request.getParameter("pwd");
     Resuilt resuilt=new Resuilt(3);
@@ -166,9 +171,10 @@ DataBase dataBase=new DataBase();
     <div style="font-size: 50px;padding-top: 60px;letter-spacing: 25px;line-height: 120px">
         <p>时间：<input type="text" name="time" id="Date" value="<%=TimeUtil.getSystemTime()%>" style="background-color:transparent;border-color: transparent;width: 610px" readonly unselectable="on"></p>
         <p>账号：<input type="text"name="phone"placeholder="电话号码"value="<%=userlist.get(0).getPhonenum()%>"style="background-color:transparent;border-color: transparent;width: 610px"readonly unselectable="on"></p>
-        <p><label>姓名：</label><input type="text"name="name"placeholder="请输入新的姓名\昵称"value="<%=userlist.get(0).getUsername()%>"style="width: 610px"></p>
-        <p><label>密码：</label><input type="password" name="pwd1" placeholder="请输入新的密码"style="width: 610px"></p>
-        <p><label>确认：</label><input type="password" name="pwd2"placeholder="请再次输入新的密码"style="width: 610px"></p>
+        <p><label>姓&nbsp&nbsp名：</label><input type="text"name="name"placeholder="请输入新的姓名\昵称"value="<%=userlist.get(0).getUsername()%>"style="width: 610px"></p>
+        <p><label>旧密码：</label><input type="password" name="pwd0" placeholder="请输入旧的密码"style="width: 610px"></p>
+        <p><label>新密码：</label><input type="password" name="pwd1" placeholder="请输入新的密码"style="width: 610px"></p>
+        <p><label>确&nbsp&nbsp认：</label><input type="password" name="pwd2"placeholder="请再次输入新的密码"style="width: 610px"></p>
         <br><input type="submit"value="提 交 修 改"id="btnGo"style="width: 450px;padding: 25px">
     </div>
 </form>

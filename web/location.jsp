@@ -16,6 +16,7 @@
     <title>星曦向荣网地图</title>
     <!--引用百度地图API-->
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fajTIS8KhipiqBmR0vdkRqys7U8Vf5qb"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PgBb565lrjcChKlq6706oQI6rqwjzA4A"></script>
 <%--    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=PgBb565lrjcChKlq6706oQI6rqwjzA4A"></script>--%>
     <script type="text/javascript" src="//mapopen.cdn.bcebos.com/github/BMapGLLib/DistanceTool/src/DistanceTool.min.js"></script>
     <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=7Cc5Kmn672miPzG4qQhvlOrERcXMMinq"></script>
